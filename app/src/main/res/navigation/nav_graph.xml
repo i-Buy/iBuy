@@ -19,4 +19,8 @@
         android:id="@+id/shoppingCardFragment"
         android:name="com.mlhysrszn.ibuy.ui.ShoppingCardFragment"
         android:label="ShoppingCardFragment" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.mlhysrszn.ibuy.ui.ProfileFragment"
+        android:label="ProfileFragment" />
 </navigation>
