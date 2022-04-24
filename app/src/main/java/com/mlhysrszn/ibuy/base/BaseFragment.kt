@@ -1,4 +1,4 @@
-package com.mlhysrszn.ibuy
+package com.mlhysrszn.ibuy.base
 
 import android.os.Bundle
 import android.view.LayoutInflater
