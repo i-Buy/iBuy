@@ -6,7 +6,7 @@ import androidx.lifecycle.ViewModel
 import com.mlhysrszn.ibuy.data.model.Category
 import com.mlhysrszn.ibuy.data.model.Product
 
-class HomeFragmentViewModel: ViewModel() {
+class HomeViewModel: ViewModel() {
 
     private val _productsList = MutableLiveData<List<Product>>()
     val productsList: LiveData<List<Product>>

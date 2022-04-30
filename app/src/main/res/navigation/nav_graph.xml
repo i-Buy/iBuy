@@ -12,7 +12,7 @@
         tools:layout="@layout/fragment_home" />
     <fragment
         android:id="@+id/favoritesFragment"
-        android:name="com.mlhysrszn.ibuy.ui.FavoritesFragment"
+        android:name="com.mlhysrszn.ibuy.ui.favorites.FavoritesFragment"
         android:label="fragment_favorites"
         tools:layout="@layout/fragment_favorites" />
     <fragment
