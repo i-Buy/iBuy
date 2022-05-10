@@ -17,7 +17,7 @@
         tools:layout="@layout/fragment_favorites" />
     <fragment
         android:id="@+id/shoppingCardFragment"
-        android:name="com.mlhysrszn.ibuy.ui.ShoppingCardFragment"
+        android:name="com.mlhysrszn.ibuy.ui.shoppingcard.ShoppingCardFragment"
         android:label="ShoppingCardFragment" />
     <fragment
         android:id="@+id/profileFragment"
