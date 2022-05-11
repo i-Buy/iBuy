@@ -8,5 +8,7 @@ class ProfileFragment : BaseFragment<FragmentProfileBinding>() {
     override fun layoutId(): Int = R.layout.fragment_profile
 
     override fun initUI() {
+
+        binding.toolbar.inflateMenu(R.menu.toolbar_menu)
     }
 }
