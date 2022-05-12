@@ -3,12 +3,12 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/aciton_notifications"
+        android:id="@+id/action_notifications"
         android:icon="@drawable/ic_notifications"
         android:title="@string/notifications"
         app:showAsAction="ifRoom" />
     <item
-        android:id="@+id/acition_edit"
+        android:id="@+id/action_edit"
         android:title="@string/edit_profile"
         app:showAsAction="never" />
     <item

@@ -22,5 +22,27 @@
     <fragment
         android:id="@+id/profileFragment"
         android:name="com.mlhysrszn.ibuy.ui.ProfileFragment"
-        android:label="ProfileFragment" />
+        android:label="ProfileFragment" >
+        <action
+            android:id="@+id/profileToEditProfile"
+            app:destination="@id/editProfileFragment" />
+        <action
+            android:id="@+id/profileToSettings"
+            app:destination="@id/settingsFragment" />
+        <action
+            android:id="@+id/profileToOrder"
+            app:destination="@id/ordersFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editProfileFragment"
+        android:name="com.mlhysrszn.ibuy.ui.EditProfileFragment"
+        android:label="EditProfileFragment" />
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.mlhysrszn.ibuy.ui.SettingsFragment"
+        android:label="SettingsFragment" />
+    <fragment
+        android:id="@+id/ordersFragment"
+        android:name="com.mlhysrszn.ibuy.ui.OrdersFragment"
+        android:label="OrdersFragment" />
 </navigation>

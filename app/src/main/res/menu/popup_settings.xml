@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/action_turkey"
+        android:title="@string/turkey" />
+    <item
+        android:id="@+id/action_bulgaria"
+        android:title="@string/bulgaria" />
+    <item
+        android:id="@+id/action_greece"
+        android:title="@string/greece" />
+    <item
+        android:id="@+id/action_romania"
+        android:title="@string/romania" />
+</menu>
