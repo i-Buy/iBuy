@@ -1,38 +1,65 @@
 package com.mlhysrszn.ibuy.ui
 
-import android.widget.PopupMenu
 import com.mlhysrszn.ibuy.R
 import com.mlhysrszn.ibuy.base.BaseFragment
 import com.mlhysrszn.ibuy.databinding.FragmentSettingsBinding
+import kotlin.properties.Delegates
 
 class SettingsFragment : BaseFragment<FragmentSettingsBinding>() {
     override fun layoutId(): Int = R.layout.fragment_settings
 
+
+
     override fun initUI() {
 
-        val popup = PopupMenu(requireContext(), binding.textViewReigon)
+        /*val popup = PopupMenu(activity, binding.buttonReigon)
         popup.menuInflater.inflate(R.menu.popup_settings, popup.menu)
 
-        popup.setOnMenuItemClickListener { item ->
-            when (item.itemId) {
-                R.id.action_greece -> {
-                    binding.textViewReigon.text = getString(R.string.greece)
-                    true
+        binding.buttonReigon.setOnClickListener {
+            popup.setOnMenuItemClickListener { item ->
+                when (item.itemId) {
+                    R.id.action_greece -> {
+                        binding.buttonReigon.text = getString(R.string.greece)
+                        true
+                    }
+                    R.id.action_bulgaria -> {
+                        binding.buttonReigon.text = getString(R.string.bulgaria)
+                        true
+                    }
+                    R.id.action_turkey -> {
+                        binding.buttonReigon.text = getString(R.string.turkey)
+                        true
+                    }
+                    R.id.action_romania -> {
+                        binding.buttonReigon.text = getString(R.string.romania)
+                        true
+                    }
+                    else -> false
                 }
-                R.id.action_bulgaria -> {
-                    binding.textViewReigon.text = getString(R.string.bulgaria)
-                    true
+
+         */
+
+        for (i in 0..100000) {
+
+            binding.buttonReigon.setOnClickListener {
+
+                if (binding.buttonReigon.text == getString(R.string.turkey)) {
+                    binding.buttonReigon.setText(R.string.greece)
                 }
-                R.id.action_turkey -> {
-                    binding.textViewReigon.text = getString(R.string.turkey)
-                    true
+
+                if (binding.buttonReigon.text == getString(R.string.greece)) {
+                    binding.buttonReigon.setText(R.string.romania)
                 }
-                R.id.action_romania -> {
-                    binding.textViewReigon.text = getString(R.string.romania)
-                    true
+
+                if (binding.buttonReigon.text == getString(R.string.romania)) {
+                    binding.buttonReigon.setText(R.string.bulgaria)
                 }
-                else -> false
+
+                if (binding.buttonReigon.text == getString(R.string.bulgaria)) {
+                    binding.buttonReigon.setText(R.string.turkey)
+                }
             }
         }
+
     }
 }

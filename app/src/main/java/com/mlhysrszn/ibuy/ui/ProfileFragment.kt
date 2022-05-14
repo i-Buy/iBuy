@@ -22,12 +22,30 @@ class ProfileFragment : BaseFragment<FragmentProfileBinding>() {
                     val action = ProfileFragmentDirections.profileToSettings()
                     requireView().findNavController().navigate(action)
                 }
+
+                R.id.action_notifications->{
+                    val action = ProfileFragmentDirections.profileToNotifications()
+                    requireView().findNavController().navigate(action)
+                }
             }
             true
         }
 
         binding.buttonYourOrders.setOnClickListener {
             it.findNavController().navigate(R.id.profileToOrder)
+        }
+
+
+        binding.buttonYourMessages.setOnClickListener {
+            it.findNavController().navigate(R.id.profileToMessages)
+        }
+
+        binding.buttonYourCoupons.setOnClickListener {
+            it.findNavController().navigate(R.id.profileToCoupons)
+        }
+
+        binding.buttonOrderAgain.setOnClickListener {
+            it.findNavController().navigate(R.id.profileToAgainOrder)
         }
 
     }
