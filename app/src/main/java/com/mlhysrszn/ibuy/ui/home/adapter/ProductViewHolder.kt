@@ -6,6 +6,6 @@ import com.mlhysrszn.ibuy.databinding.ItemProductBinding
 
 class ProductViewHolder(private val binding: ItemProductBinding): RecyclerView.ViewHolder(binding.root) {
     fun bind(item: Product) {
-        // TODO
+        binding.product = item
     }
 }
