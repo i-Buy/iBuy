@@ -12,6 +12,29 @@
         android:layout_height="match_parent"
         tools:context=".ui.SettingsFragment">
 
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="192dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/blue_to_white_background" />
+
+        <TextView
+            android:id="@+id/textView27"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/settings"
+            android:textColor="#FFFFFF"
+            android:textSize="34sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
         <com.google.android.material.switchmaterial.SwitchMaterial
             android:id="@+id/switchDarkMode"
             android:layout_width="wrap_content"
@@ -25,12 +48,14 @@
             app:layout_constraintStart_toEndOf="@+id/textView9"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/textViewReigon"
+        <Button
+            android:id="@+id/buttonReigon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="72dp"
+            android:layout_marginTop="64dp"
             android:layout_marginEnd="24dp"
+            android:backgroundTint="#0003DAC5"
+            android:textColor="@color/primaryDarkColor"
             android:text="@string/turkey"
             android:textSize="24sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -61,7 +86,7 @@
             android:text="@string/region"
             android:textSize="24sp"
             android:textStyle="bold"
-            app:layout_constraintEnd_toStartOf="@+id/textViewReigon"
+            app:layout_constraintEnd_toStartOf="@+id/buttonReigon"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView9" />
@@ -84,13 +109,14 @@
             android:id="@+id/switchNotifications"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="72dp"
+            android:layout_marginTop="64dp"
             android:layout_marginEnd="24dp"
             android:minWidth="48dp"
             android:minHeight="48dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/textView11"
-            app:layout_constraintTop_toBottomOf="@+id/textViewReigon" />
+            app:layout_constraintTop_toBottomOf="@+id/buttonReigon" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

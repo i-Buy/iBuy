@@ -55,7 +55,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="10dp"
-                    android:text="In the distribution phase"
+                    android:text="@string/in_the_distribution_phase"
                     android:textColor="#11FA1B"
                     android:textSize="20sp"
                     android:textStyle="bold"
@@ -68,7 +68,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="10dp"
-                    android:text="Delivered 18.05.2022"
+                    android:text="@string/delivered_18_05_2022"
                     android:textColor="@color/primaryDarkColor"
                     android:textSize="20sp"
                     android:textStyle="bold"
@@ -76,12 +76,12 @@
                     app:layout_constraintTop_toBottomOf="@+id/textView14" />
 
                 <TextView
-                    android:id="@+id/textViewVacummer2"
+                    android:id="@+id/textView2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="10dp"
-                    android:text="Delivered 15 03 2022"
+                    android:text="@string/delivered_15_03_2022"
                     android:textColor="@color/primaryDarkColor"
                     android:textSize="20sp"
                     android:textStyle="bold"
@@ -94,7 +94,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="10dp"
-                    android:text="Delivered 15 03 2022"
+                    android:text="@string/delivered_29_02_2022"
                     android:textColor="@color/primaryDarkColor"
                     android:textSize="20sp"
                     android:textStyle="bold"
@@ -107,7 +107,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="10dp"
-                    android:text="Delivered 25 12 2021"
+                    android:text="@string/delivered_25_12_2021"
                     android:textColor="@color/primaryDarkColor"
                     android:textSize="20sp"
                     android:textStyle="bold"
@@ -130,7 +130,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="20dp"
-                    android:text="Apple MacBook M1 Chip 2020"
+                    android:text="@string/apple_macbook_m1_chip_2020"
                     android:textSize="16sp"
                     app:layout_constraintStart_toEndOf="@+id/imageMac"
                     app:layout_constraintTop_toTopOf="@id/imageMac" />
@@ -151,7 +151,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="20dp"
-                    android:text="Philips FC9750/07 Powerpro"
+                    android:text="@string/philips_fc9750_07_powerpro"
                     android:textSize="16sp"
                     app:layout_constraintStart_toEndOf="@+id/imageView8"
                     app:layout_constraintTop_toTopOf="@+id/imageView8" />
@@ -171,10 +171,10 @@
                     android:layout_width="45dp"
                     android:layout_height="42dp"
                     android:layout_marginStart="172dp"
-                    android:layout_marginTop="5dp"
                     android:src="@drawable/ic_giftcard"
                     app:layout_constraintStart_toEndOf="@+id/imageView12"
-                    app:layout_constraintTop_toBottomOf="@+id/textViewVacummer2" />
+                    app:layout_constraintTop_toBottomOf="@id/textView2"
+                    tools:layout_editor_absoluteY="426dp" />
 
                 <ImageView
                     android:id="@+id/imageView14"
@@ -213,7 +213,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="4dp"
                     android:layout_marginTop="20dp"
-                    android:text="The Office Michael Scoot Cup"
+                    android:text="@string/the_office_michael_scoot_mug"
                     android:textSize="16sp"
                     app:layout_constraintStart_toEndOf="@+id/imageView12"
                     app:layout_constraintTop_toTopOf="@+id/imageView12" />
@@ -234,7 +234,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="20dp"
-                    android:text="Xiaomi Redmi Note 11 Pro"
+                    android:text="@string/xiaomi_redmi_note_11_pro"
                     android:textSize="16sp"
                     app:layout_constraintStart_toEndOf="@+id/imageView7"
                     app:layout_constraintTop_toTopOf="@id/imageView7"/>
@@ -255,7 +255,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="20dp"
-                    android:text="Levi's Long Sleeve T-shirt Man "
+                    android:text="@string/levi_s_long_sleeve_t_shirt_man"
                     android:textSize="16sp"
                     app:layout_constraintStart_toEndOf="@id/imageView15"
                     app:layout_constraintTop_toTopOf="@+id/imageView15" />

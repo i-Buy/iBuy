@@ -25,13 +25,39 @@
         android:label="ProfileFragment" >
         <action
             android:id="@+id/profileToEditProfile"
-            app:destination="@id/editProfileFragment" />
+            app:destination="@id/editProfileFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_enter_anim" />
         <action
             android:id="@+id/profileToSettings"
-            app:destination="@id/settingsFragment" />
+            app:destination="@id/settingsFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
         <action
             android:id="@+id/profileToOrder"
-            app:destination="@id/ordersFragment" />
+            app:destination="@id/ordersFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+        <action
+            android:id="@+id/profileToMessages"
+            app:destination="@id/messagesFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+        <action
+            android:id="@+id/profileToCoupons"
+            app:destination="@id/couponsFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+        <action
+            android:id="@+id/profileToAgainOrder"
+            app:destination="@id/againOrderFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+        <action
+            android:id="@+id/profileToNotifications"
+            app:destination="@id/notificationsFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
     </fragment>
     <fragment
         android:id="@+id/editProfileFragment"
@@ -45,4 +71,48 @@
         android:id="@+id/ordersFragment"
         android:name="com.mlhysrszn.ibuy.ui.OrdersFragment"
         android:label="OrdersFragment" />
+    <fragment
+        android:id="@+id/messagesFragment"
+        android:name="com.mlhysrszn.ibuy.ui.shoppingcard.MessagesFragment"
+        android:label="MessagesFragment" >
+        <action
+            android:id="@+id/messagesToIBuy"
+            app:destination="@id/IBuyMessageFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+        <action
+            android:id="@+id/messagesToBestShop"
+            app:destination="@id/bestShopMessageFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+        <action
+            android:id="@+id/messagesToFlowerBasket"
+            app:destination="@id/flowerBasketMessageFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/IBuyMessageFragment"
+        android:name="com.mlhysrszn.ibuy.ui.IBuyMessageFragment"
+        android:label="IBuyMessageFragment" />
+    <fragment
+        android:id="@+id/bestShopMessageFragment"
+        android:name="com.mlhysrszn.ibuy.ui.BestShopMessageFragment"
+        android:label="bestShopMessageFragment" />
+    <fragment
+        android:id="@+id/flowerBasketMessageFragment"
+        android:name="com.mlhysrszn.ibuy.ui.FlowerBasketMessageFragment"
+        android:label="flowerBasketMessageFragment" />
+    <fragment
+        android:id="@+id/couponsFragment"
+        android:name="com.mlhysrszn.ibuy.ui.CouponsFragment"
+        android:label="CouponsFragment" />
+    <fragment
+        android:id="@+id/againOrderFragment"
+        android:name="com.mlhysrszn.ibuy.ui.AgainOrderFragment"
+        android:label="AgainOrderFragment" />
+    <fragment
+        android:id="@+id/notificationsFragment"
+        android:name="com.mlhysrszn.ibuy.ui.NotificationsFragment"
+        android:label="NotificationsFragment" />
 </navigation>
