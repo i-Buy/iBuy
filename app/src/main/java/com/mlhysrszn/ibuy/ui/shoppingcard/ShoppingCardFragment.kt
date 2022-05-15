@@ -1,8 +1,8 @@
 package com.mlhysrszn.ibuy.ui.shoppingcard
 
 import android.view.View
-import androidx.databinding.BindingAdapter
 import androidx.fragment.app.viewModels
+import androidx.navigation.findNavController
 import com.mlhysrszn.ibuy.R
 import com.mlhysrszn.ibuy.base.BaseFragment
 import com.mlhysrszn.ibuy.data.local.AppDatabase
@@ -26,7 +26,7 @@ class ShoppingCardFragment : BaseFragment<FragmentShoppingCardBinding>() {
         val adapter: ShoppingCardAdapter by lazy { ShoppingCardAdapter(viewModel) }
 
         viewModel.shoppingCardList.observe(viewLifecycleOwner) {
-            when(it) {
+            when (it) {
                 is ApiStatus.Success -> {
                     adapter.productsList = it.data
                     binding.rvShoppingCard.adapter = adapter
@@ -40,6 +40,12 @@ class ShoppingCardFragment : BaseFragment<FragmentShoppingCardBinding>() {
                     binding.progressBar.visibility = View.VISIBLE
                 }
             }
+        }
+
+        adapter.onRootClick = {
+            val action =
+                ShoppingCardFragmentDirections.actionShoppingCardFragmentToDetailFragment(it)
+            requireView().findNavController().navigate(action)
         }
     }
 }

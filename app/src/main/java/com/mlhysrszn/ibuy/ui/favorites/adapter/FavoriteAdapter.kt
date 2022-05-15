@@ -11,11 +11,12 @@ class FavoriteAdapter :
 
     var favoritesList: List<ProductEntity> = emptyList()
     var onClick: ((product: ProductEntity) -> Unit)? = null
+    var onRootClick: ((product: ProductEntity) -> Unit)? = null
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FavoriteViewHolder {
         val itemFavoritesBinding =
             ItemProductBinding.inflate(LayoutInflater.from(parent.context), parent, false)
-        return FavoriteViewHolder(itemFavoritesBinding, onClick)
+        return FavoriteViewHolder(itemFavoritesBinding, onClick, onRootClick)
     }
 
     override fun onBindViewHolder(holder: FavoriteViewHolder, position: Int) {

@@ -21,7 +21,6 @@ class ProductViewHolder(
             binding.buttonAddBasket.text = "Remove From Basket"
         }
         binding.root.setOnClickListener {
-            println("Rootclick")
             onRootClick?.invoke(item)
         }
         binding.buttonFav.setOnClickListener {

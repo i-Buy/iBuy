@@ -1,6 +1,7 @@
 package com.mlhysrszn.ibuy.ui.favorites
 
 import androidx.fragment.app.viewModels
+import androidx.navigation.findNavController
 import com.mlhysrszn.ibuy.R
 import com.mlhysrszn.ibuy.base.BaseFragment
 import com.mlhysrszn.ibuy.data.local.AppDatabase
@@ -32,6 +33,13 @@ class FavoritesFragment : BaseFragment<FragmentFavoritesBinding>() {
                 adapter.favoritesList = list
                 binding.rvFavorites.adapter = adapter
             }
+        }
+
+        adapter.onRootClick = {
+            val action = FavoritesFragmentDirections.actionFavoritesFragmentToDetailFragment(
+                viewModel.convertToModel(it)
+            )
+            requireView().findNavController().navigate(action)
         }
     }
 }

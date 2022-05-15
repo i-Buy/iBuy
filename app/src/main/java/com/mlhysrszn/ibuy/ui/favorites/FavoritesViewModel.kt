@@ -5,6 +5,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.mlhysrszn.ibuy.data.local.entity.ProductEntity
+import com.mlhysrszn.ibuy.data.model.Product
 import com.mlhysrszn.ibuy.data.repository.ProductRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -30,5 +31,17 @@ class FavoritesViewModel(private val repository: ProductRepository) : ViewModel(
             repository.deleteFromFav(item)
         }
         getAllFavProducts()
+    }
+
+    fun convertToModel(item: ProductEntity): Product {
+        return Product(
+            item.id,
+            item.name,
+            item.price,
+            item.inStock,
+            item.status,
+            item.category,
+            item.image
+        )
     }
 }
