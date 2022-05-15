@@ -72,7 +72,7 @@
     <string name="mark_as_read">Mark as Read</string>
     <string name="re_are_you_really_the_best">Re: Are You Really The Best</string>
     <string name="mark_as_unread">Mark as unread</string>
-    <string name="add_to_basket">Add to Basket</string>
+    <string name="add_to_basket_item">Add to Basket</string>
     <string name="productstatus">ProductStatus</string>
     <string name="status">Status:</string>
     <string name="product_category">Product Category</string>
@@ -80,4 +80,5 @@
     <string name="stock">Stock:</string>
     <string name="stocknumber">StockNumber</string>
     <string name="you_have_0_notifications">You Have 0 Notifications</string>
+    <string name="add_to_basket">Add to Basket</string>
 </resources>
