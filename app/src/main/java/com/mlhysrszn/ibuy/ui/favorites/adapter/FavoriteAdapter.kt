@@ -3,10 +3,11 @@ package com.mlhysrszn.ibuy.ui.favorites.adapter
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.mlhysrszn.ibuy.data.local.entity.ProductEntity
 import com.mlhysrszn.ibuy.data.model.Product
 import com.mlhysrszn.ibuy.databinding.ItemProductBinding
 
-class FavoriteAdapter(private val favoritesList: List<Product>) :
+class FavoriteAdapter(private val favoritesList: List<ProductEntity>) :
     RecyclerView.Adapter<FavoriteViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FavoriteViewHolder {
         val itemFavoritesBinding =
