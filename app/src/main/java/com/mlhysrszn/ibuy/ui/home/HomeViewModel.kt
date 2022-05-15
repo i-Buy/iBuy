@@ -48,4 +48,16 @@ class HomeViewModel(private val repository: ProductRepository) : ViewModel() {
     fun isFavorite(itemId: Int): Boolean {
         return repository.isFavorite(itemId)
     }
+
+    fun convertToEntity(item: Product): ProductEntity {
+        return ProductEntity(
+            item.id,
+            item.name,
+            item.price,
+            item.inStock,
+            item.status,
+            item.category,
+            item.image
+        )
+    }
 }

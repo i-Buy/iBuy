@@ -9,7 +9,8 @@ import com.mlhysrszn.ibuy.databinding.ItemProductBinding
 
 class FavoriteViewHolder(
     private val binding: ItemProductBinding,
-    private val onClick: ((product: ProductEntity) -> Unit)? = null
+    private val onClick: ((product: ProductEntity) -> Unit)? = null,
+    private val onRootClick: ((product: ProductEntity) -> Unit)? = null
 ) :
     RecyclerView.ViewHolder(binding.root) {
     fun bind(item: ProductEntity) {
@@ -31,6 +32,9 @@ class FavoriteViewHolder(
 
         binding.buttonFav.setOnClickListener {
             onClick?.invoke(item)
+        }
+        binding.root.setOnClickListener {
+            onRootClick?.invoke(item)
         }
     }
 }

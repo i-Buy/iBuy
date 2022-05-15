@@ -6,7 +6,6 @@ import androidx.navigation.findNavController
 import com.mlhysrszn.ibuy.R
 import com.mlhysrszn.ibuy.base.BaseFragment
 import com.mlhysrszn.ibuy.data.local.AppDatabase
-import com.mlhysrszn.ibuy.data.local.entity.ProductEntity
 import com.mlhysrszn.ibuy.data.repository.ProductRepository
 import com.mlhysrszn.ibuy.databinding.FragmentHomeBinding
 import com.mlhysrszn.ibuy.ui.home.adapter.ProductAdapter
@@ -52,27 +51,11 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
         adapter.onClick = {
             if (viewModel.isFavorite(it.id)) {
                 viewModel.deleteFromFav(
-                    ProductEntity(
-                        it.id,
-                        it.name,
-                        it.price,
-                        it.inStock,
-                        it.status,
-                        it.category,
-                        it.image
-                    )
+                    viewModel.convertToEntity(it)
                 )
             } else {
                 viewModel.addToFav(
-                    ProductEntity(
-                        it.id,
-                        it.name,
-                        it.price,
-                        it.inStock,
-                        it.status,
-                        it.category,
-                        it.image
-                    )
+                    viewModel.convertToEntity(it)
                 )
             }
             viewModel.productsList.observe(viewLifecycleOwner) { status ->

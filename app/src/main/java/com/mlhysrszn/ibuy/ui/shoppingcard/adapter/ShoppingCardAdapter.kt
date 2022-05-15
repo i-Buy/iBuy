@@ -12,11 +12,12 @@ class ShoppingCardAdapter(private val viewModel: ShoppingCardViewModel) :
 
     var productsList: List<Product> = emptyList()
     var onClick: ((product: Product) -> Unit)? = null
+    var onRootClick: ((product: Product) -> Unit)? = null
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ShoppingCardViewHolder {
         val itemProductBinding =
             ItemProductBinding.inflate(LayoutInflater.from(parent.context), parent, false)
-        return ShoppingCardViewHolder(itemProductBinding, onClick, viewModel)
+        return ShoppingCardViewHolder(itemProductBinding, onClick, viewModel, onRootClick)
     }
 
     override fun onBindViewHolder(holder: ShoppingCardViewHolder, position: Int) {

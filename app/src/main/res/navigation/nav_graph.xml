@@ -18,11 +18,19 @@
         android:id="@+id/favoritesFragment"
         android:name="com.mlhysrszn.ibuy.ui.favorites.FavoritesFragment"
         android:label="fragment_favorites"
-        tools:layout="@layout/fragment_favorites" />
+        tools:layout="@layout/fragment_favorites" >
+        <action
+            android:id="@+id/action_favoritesFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
     <fragment
         android:id="@+id/shoppingCardFragment"
         android:name="com.mlhysrszn.ibuy.ui.shoppingcard.ShoppingCardFragment"
-        android:label="ShoppingCardFragment" />
+        android:label="ShoppingCardFragment" >
+        <action
+            android:id="@+id/action_shoppingCardFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
     <fragment
         android:id="@+id/profileFragment"
         android:name="com.mlhysrszn.ibuy.ui.ProfileFragment"
@@ -121,7 +129,7 @@
         android:label="NotificationsFragment" />
     <fragment
         android:id="@+id/detailFragment"
-        android:name="com.mlhysrszn.ibuy.ui.DetailFragment"
+        android:name="com.mlhysrszn.ibuy.ui.detail.DetailFragment"
         android:label="DetailFragment" >
         <argument
             android:name="product"
