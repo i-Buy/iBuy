@@ -10,7 +10,7 @@ import com.mlhysrszn.ibuy.ui.favorites.adapter.FavoriteAdapter
 
 class FavoritesFragment : BaseFragment<FragmentFavoritesBinding>() {
 
-    private lateinit var adapter: FavoriteAdapter
+    private val adapter: FavoriteAdapter by lazy { FavoriteAdapter() }
 
     override fun layoutId(): Int = R.layout.fragment_favorites
 
@@ -21,8 +21,17 @@ class FavoritesFragment : BaseFragment<FragmentFavoritesBinding>() {
             FavoritesViewModelFactory(repository)
         }
         viewModel.favoritesList.observe(viewLifecycleOwner) {
-            adapter = FavoriteAdapter(it)
+            adapter.favoritesList = it
             binding.rvFavorites.adapter = adapter
+        }
+
+        adapter.onClick = {
+            viewModel.deleteFromFav(it)
+
+            viewModel.favoritesList.observe(viewLifecycleOwner) { list ->
+                adapter.favoritesList = list
+                binding.rvFavorites.adapter = adapter
+            }
         }
     }
 }

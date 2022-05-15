@@ -5,6 +5,9 @@
 
     <data>
 
+        <variable
+            name="product"
+            type="com.mlhysrszn.ibuy.data.model.Product" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -48,14 +51,17 @@
 
         <TextView
             android:id="@+id/textViewProductName"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
+            android:textAlignment="textEnd"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="16dp"
             android:fontFamily="@font/archivo"
+            android:text="@{product.name}"
             android:textColor="#FFFFFF"
-            android:textSize="40sp"
+            android:textSize="32sp"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageViewBack"
             app:layout_constraintTop_toTopOf="parent"
             tools:text="ProductName" />
 
@@ -92,6 +98,7 @@
             android:text="@string/add_to_basket"
             android:textColor="@color/white"
             app:cornerRadius="20dp"
+            app:layout_constraintEnd_toStartOf="@+id/imageAddFav"
             app:layout_constraintStart_toEndOf="@+id/imageView20"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageViewProductImage" />
@@ -105,6 +112,7 @@
             android:backgroundTint="#00000000"
             android:src="@drawable/ic_favorite"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/buttonAddBasket"
             app:layout_constraintTop_toBottomOf="@+id/imageViewProductImage"
             tools:ignore="SpeakableTextPresentCheck" />
 
@@ -169,6 +177,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="16dp"
+            android:text="@{product.category}"
             android:textSize="12sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textViewProductName"
@@ -176,6 +185,7 @@
 
         <TextView
             android:id="@+id/textViewProductPrice"
+            intText="@{product.price}"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="11dp"
@@ -205,6 +215,7 @@
 
         <TextView
             android:id="@+id/textViewProductStockNumber"
+            intText="@{product.inStock}"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="4dp"

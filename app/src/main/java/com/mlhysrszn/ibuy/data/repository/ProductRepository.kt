@@ -33,4 +33,17 @@ class ProductRepository(private val productsDao: ProductsDao?) {
     suspend fun deleteFromFav(item: ProductEntity) {
         productsDao?.deleteFavProduct(item)
     }
+
+    fun isFavorite(itemId: Int): Boolean {
+        return productsDao?.getFavProduct(itemId)?.id != null
+    }
+
+    suspend fun getAllBasketProducts(): ApiStatus<List<Product>> {
+        return try {
+            val response = ApiUtils.getApiService().getBasketProducts()
+            ApiStatus.Success(response.products)
+        } catch (e: HttpException) {
+            ApiStatus.Error(e.message())
+        }
+    }
 }

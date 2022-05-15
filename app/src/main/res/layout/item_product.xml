@@ -55,6 +55,7 @@
                 android:layout_marginTop="15dp"
                 android:layout_marginBottom="1dp"
                 android:text="@{product.name}"
+                android:textAlignment="center"
                 app:layout_constraintBottom_toTopOf="@+id/txtPrice"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -68,20 +69,22 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
                 android:layout_marginBottom="8dp"
+                android:textAlignment="center"
+                android:textSize="20sp"
                 app:layout_constraintBottom_toTopOf="@+id/buttonAddBasket"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/txtName"
-                android:textSize="20sp"
                 tools:text="23.99₺" />
 
             <Button
                 android:id="@+id/buttonAddBasket"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:backgroundTint="@color/white"
                 android:layout_marginHorizontal="10dp"
+                android:backgroundTint="@color/white"
                 android:text="@string/add_to_basket_item"
+                android:textAlignment="center"
                 android:textColor="@color/primaryDarkColor"
                 app:cornerRadius="15dp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -92,17 +95,14 @@
                 app:strokeWidth="1dp" />
 
             <ImageButton
-                android:id="@+id/imageButton"
+                android:id="@+id/buttonFav"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_marginTop="12dp"
                 android:layout_marginEnd="16dp"
                 android:background="#00000000"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/imgProduct"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/ic_favorite_border"
-                app:tint="@color/primaryDarkColor" />
+                app:layout_constraintTop_toTopOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

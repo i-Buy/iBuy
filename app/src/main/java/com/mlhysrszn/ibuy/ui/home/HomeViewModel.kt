@@ -37,13 +37,15 @@ class HomeViewModel(private val repository: ProductRepository) : ViewModel() {
         viewModelScope.launch(Dispatchers.IO) {
             repository.addToFav(item)
         }
-
-
     }
 
     fun deleteFromFav(item: ProductEntity) {
-        viewModelScope.launch {
+        viewModelScope.launch(Dispatchers.IO) {
             repository.deleteFromFav(item)
         }
+    }
+
+    fun isFavorite(itemId: Int): Boolean {
+        return repository.isFavorite(itemId)
     }
 }

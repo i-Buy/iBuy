@@ -4,7 +4,6 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/Ozan/AndroidStudioProjects/iBuy/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.182" />
-        <entry key="..\:/Users/Ozan/AndroidStudioProjects/iBuy/app/src/main/res/drawable/button_border.xml" value="0.1675" />
         <entry key="..\:/Users/Ozan/AndroidStudioProjects/iBuy/app/src/main/res/drawable/circle_layout.xml" value="0.182" />
         <entry key="..\:/Users/Ozan/AndroidStudioProjects/iBuy/app/src/main/res/drawable/ic_arrow_back.xml" value="0.1355" />
         <entry key="..\:/Users/Ozan/AndroidStudioProjects/iBuy/app/src/main/res/drawable/ic_baseline_notifications_24.xml" value="0.1935" />
@@ -32,10 +31,8 @@
         <entry key="..\:/Users/Ozan/AndroidStudioProjects/iBuy/app/src/main/res/layout/fragment_profile.xml" value="0.264" />
         <entry key="..\:/Users/Ozan/AndroidStudioProjects/iBuy/app/src/main/res/layout/fragment_settings.xml" value="0.264" />
         <entry key="..\:/Users/Ozan/AndroidStudioProjects/iBuy/app/src/main/res/layout/fragment_settings2.xml" value="0.1" />
-        <entry key="..\:/Users/Ozan/AndroidStudioProjects/iBuy/app/src/main/res/layout/fragment_shopping_card.xml" value="0.23802083333333332" />
-        <entry key="..\:/Users/Ozan/AndroidStudioProjects/iBuy/app/src/main/res/layout/item_product.xml" value="0.4" />
+        <entry key="..\:/Users/Ozan/AndroidStudioProjects/iBuy/app/src/main/res/layout/item_product.xml" value="0.24895833333333334" />
         <entry key="..\:/Users/Ozan/AndroidStudioProjects/iBuy/app/src/main/res/menu/menu_bottom.xml" value="0.24895833333333334" />
-        <entry key="..\:/Users/Ozan/AndroidStudioProjects/iBuy/app/src/main/res/menu/menu_empty.xml" value="0.23802083333333332" />
         <entry key="..\:/Users/Ozan/AndroidStudioProjects/iBuy/app/src/main/res/menu/menu_profile.xml" value="0.24895833333333334" />
         <entry key="..\:/Users/Ozan/AndroidStudioProjects/iBuy/app/src/main/res/menu/popup_settings.xml" value="0.2484375" />
         <entry key="..\:/Users/Ozan/AndroidStudioProjects/iBuy/app/src/main/res/menu/toolbar_menu.xml" value="0.24895833333333334" />
@@ -46,9 +43,10 @@
         <entry key="app/src/main/res/layout/fragment_detail.xml" value="0.4036458333333333" />
         <entry key="app/src/main/res/layout/fragment_editprofile.xml" value="0.4036458333333333" />
         <entry key="app/src/main/res/layout/fragment_favorites.xml" value="0.2151268115942029" />
-        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.27248002204342164" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.2619047619047619" />
+        <entry key="app/src/main/res/layout/fragment_orders.xml" value="0.11255493164062501" />
         <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.3098958333333333" />
-        <entry key="app/src/main/res/layout/fragment_shopping_card.xml" value="0.3098958333333333" />
+        <entry key="app/src/main/res/layout/fragment_shopping_card.xml" value="0.23053892215568864" />
         <entry key="app/src/main/res/layout/item_product.xml" value="0.4036458333333333" />
         <entry key="app/src/main/res/menu/menu_bottom.xml" value="0.24947916666666667" />
       </map>
@@ -63,7 +61,7 @@
   <component name="VisualizationToolProject">
     <option name="state">
       <ProjectState>
-        <option name="scale" value="0.2" />
+        <option name="scale" value="0.11255493164062501" />
       </ProjectState>
     </option>
   </component>

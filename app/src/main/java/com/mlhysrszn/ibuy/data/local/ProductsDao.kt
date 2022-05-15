@@ -17,4 +17,7 @@ interface ProductsDao {
 
     @Delete
     fun deleteFavProduct(favProduct: ProductEntity)
+
+    @Query("SELECT * FROM products WHERE id = :productId")
+    fun getFavProduct(productId: Int): ProductEntity?
 }

@@ -24,4 +24,11 @@ class FavoritesViewModel(private val repository: ProductRepository) : ViewModel(
             _favoritesList.postValue(repository.getAllFavProducts())
         }
     }
+
+    fun deleteFromFav(item: ProductEntity) {
+        viewModelScope.launch {
+            repository.deleteFromFav(item)
+        }
+        getAllFavProducts()
+    }
 }

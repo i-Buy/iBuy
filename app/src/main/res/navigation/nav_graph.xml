@@ -9,7 +9,11 @@
         android:id="@+id/homeFragment"
         android:name="com.mlhysrszn.ibuy.ui.home.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
     <fragment
         android:id="@+id/favoritesFragment"
         android:name="com.mlhysrszn.ibuy.ui.favorites.FavoritesFragment"
@@ -115,4 +119,12 @@
         android:id="@+id/notificationsFragment"
         android:name="com.mlhysrszn.ibuy.ui.NotificationsFragment"
         android:label="NotificationsFragment" />
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.mlhysrszn.ibuy.ui.DetailFragment"
+        android:label="DetailFragment" >
+        <argument
+            android:name="product"
+            app:argType="com.mlhysrszn.ibuy.data.model.Product" />
+    </fragment>
 </navigation>

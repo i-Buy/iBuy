@@ -2,6 +2,7 @@ package com.mlhysrszn.ibuy.data.model
 
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
+import java.io.Serializable
 
 data class Product(
 
@@ -32,4 +33,4 @@ data class Product(
     @SerializedName("product_image")
     @Expose
     val image: String
-)
+): Serializable

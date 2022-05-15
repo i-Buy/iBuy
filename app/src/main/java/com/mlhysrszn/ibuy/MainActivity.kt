@@ -12,10 +12,13 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        supportFragmentManager.addOnBackStackChangedListener {
+
+        }
 
         val navHostFragment =
             supportFragmentManager.findFragmentById(R.id.container) as NavHostFragment
-        NavigationUI.setupWithNavController(binding.bottomNavBar, navHostFragment.navController)
+        NavigationUI.setupWithNavController(binding.bottomNavBar, navHostFragment.navController,false)
 
     }
 }
