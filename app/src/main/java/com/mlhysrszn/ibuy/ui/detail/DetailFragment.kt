@@ -6,7 +6,7 @@ import com.bumptech.glide.Glide
 import com.mlhysrszn.ibuy.R
 import com.mlhysrszn.ibuy.base.BaseFragment
 import com.mlhysrszn.ibuy.data.local.AppDatabase
-import com.mlhysrszn.ibuy.data.model.Product
+import com.mlhysrszn.ibuy.data.remote.model.Product
 import com.mlhysrszn.ibuy.data.repository.ProductRepository
 import com.mlhysrszn.ibuy.databinding.FragmentDetailBinding
 import kotlinx.coroutines.Dispatchers
@@ -42,6 +42,12 @@ class DetailFragment : BaseFragment<FragmentDetailBinding>() {
                     viewModel.addToFav(viewModel.convertToEntity(product))
                 }
                 binding.imageAddFav.setImageResource(R.drawable.ic_faved)
+            }
+        }
+
+        binding.buttonAddBasket.setOnClickListener {
+            lifecycleScope.launch(Dispatchers.IO) {
+                viewModel.updateBasketStatus(product)
             }
         }
 

@@ -4,7 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.mlhysrszn.ibuy.data.model.Product
+import com.mlhysrszn.ibuy.data.remote.model.Product
 import com.mlhysrszn.ibuy.data.repository.ProductRepository
 import com.mlhysrszn.ibuy.utils.ApiStatus
 import kotlinx.coroutines.Dispatchers

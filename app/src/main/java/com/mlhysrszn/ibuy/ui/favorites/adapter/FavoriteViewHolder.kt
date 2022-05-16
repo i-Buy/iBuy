@@ -4,7 +4,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.mlhysrszn.ibuy.R
 import com.mlhysrszn.ibuy.data.local.entity.ProductEntity
-import com.mlhysrszn.ibuy.data.model.Product
+import com.mlhysrszn.ibuy.data.remote.model.Product
 import com.mlhysrszn.ibuy.databinding.ItemProductBinding
 
 class FavoriteViewHolder(

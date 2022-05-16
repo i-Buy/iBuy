@@ -3,7 +3,7 @@ package com.mlhysrszn.ibuy.ui.shoppingcard.adapter
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.mlhysrszn.ibuy.data.model.Product
+import com.mlhysrszn.ibuy.data.remote.model.Product
 import com.mlhysrszn.ibuy.databinding.ItemProductBinding
 import com.mlhysrszn.ibuy.ui.shoppingcard.ShoppingCardViewModel
 

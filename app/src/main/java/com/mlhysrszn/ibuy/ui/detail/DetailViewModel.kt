@@ -3,7 +3,7 @@ package com.mlhysrszn.ibuy.ui.detail
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.mlhysrszn.ibuy.data.local.entity.ProductEntity
-import com.mlhysrszn.ibuy.data.model.Product
+import com.mlhysrszn.ibuy.data.remote.model.Product
 import com.mlhysrszn.ibuy.data.repository.ProductRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -23,6 +23,16 @@ class DetailViewModel(private val repository: ProductRepository) : ViewModel() {
     suspend fun deleteFromFav(item: ProductEntity) {
         viewModelScope.launch(Dispatchers.IO) {
             repository.deleteFromFav(item)
+        }
+    }
+
+    suspend fun updateBasketStatus(product: Product) {
+        viewModelScope.launch(Dispatchers.IO) {
+            if (product.status == 1) {
+                repository.updateBasketStatus(product.id, 0)
+            } else {
+                repository.updateBasketStatus(product.id, 1)
+            }
         }
     }
 

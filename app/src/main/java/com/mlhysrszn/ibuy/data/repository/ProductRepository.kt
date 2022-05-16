@@ -2,7 +2,7 @@ package com.mlhysrszn.ibuy.data.repository
 
 import com.mlhysrszn.ibuy.data.local.ProductsDao
 import com.mlhysrszn.ibuy.data.local.entity.ProductEntity
-import com.mlhysrszn.ibuy.data.model.Product
+import com.mlhysrszn.ibuy.data.remote.model.Product
 import com.mlhysrszn.ibuy.utils.ApiStatus
 import com.mlhysrszn.ibuy.utils.ApiUtils
 import kotlinx.coroutines.Dispatchers
@@ -45,5 +45,9 @@ class ProductRepository(private val productsDao: ProductsDao?) {
         } catch (e: HttpException) {
             ApiStatus.Error(e.message())
         }
+    }
+
+    suspend fun updateBasketStatus(productId: Int, productStatus: Int) {
+       ApiUtils.getApiService().updateBasket(productId,productStatus)
     }
 }

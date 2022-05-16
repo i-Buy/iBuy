@@ -7,7 +7,7 @@
 
         <variable
             name="product"
-            type="com.mlhysrszn.ibuy.data.model.Product" />
+            type="com.mlhysrszn.ibuy.data.remote.model.Product" />
 
     </data>
 

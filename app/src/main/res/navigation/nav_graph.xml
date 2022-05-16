@@ -133,6 +133,6 @@
         android:label="DetailFragment" >
         <argument
             android:name="product"
-            app:argType="com.mlhysrszn.ibuy.data.model.Product" />
+            app:argType="com.mlhysrszn.ibuy.data.remote.model.Product" />
     </fragment>
 </navigation>

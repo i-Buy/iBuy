@@ -5,7 +5,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.mlhysrszn.ibuy.data.local.entity.ProductEntity
-import com.mlhysrszn.ibuy.data.model.Product
+import com.mlhysrszn.ibuy.data.remote.model.Product
 import com.mlhysrszn.ibuy.data.repository.ProductRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch

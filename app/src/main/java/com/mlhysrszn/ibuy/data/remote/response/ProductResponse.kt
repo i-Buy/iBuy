@@ -1,8 +1,8 @@
-package com.mlhysrszn.ibuy.data.response
+package com.mlhysrszn.ibuy.data.remote.response
 
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
-import com.mlhysrszn.ibuy.data.model.Product
+import com.mlhysrszn.ibuy.data.remote.model.Product
 
 data class ProductResponse(
 
